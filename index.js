@@ -1,7 +1,7 @@
 const axios = require("axios");
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const cors = require("cors");
 
 app.use(cors());
@@ -27,5 +27,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-	console.log(`Running server`);
+	console.log(`Running server on port ${port}`);
 });
