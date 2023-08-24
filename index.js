@@ -22,6 +22,10 @@ app.get("/universities/:country", async (req, res) => {
 	}
 });
 
+app.get("/", (req, res) => {
+	res.send("Working!");
+});
+
 app.listen(port, () => {
-	console.log(`Example app listening at http://localhost:${port}`);
+	console.log(`Running server`);
 });
